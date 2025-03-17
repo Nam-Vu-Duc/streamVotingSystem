@@ -153,9 +153,10 @@ if __name__ == '__main__':
 
                 conn.commit()
 
-        for i in range(10):
+        for i in range(100):
             voter_data = generate_voter_data()
             insert_voters(conn, cur, voter_data)
+            print('Produce voter {}, data:{}'.format(i, voter_data))
 
             producer.produce(
                 'voters_topic',
@@ -163,8 +164,6 @@ if __name__ == '__main__':
                 value=json.dumps(voter_data),
                 on_delivery=delivery_report
             )
-
-        print('Produce voter {}, data:{}'.format(i, voter_data) )
 
         producer.flush()
 
