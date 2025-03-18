@@ -79,6 +79,3 @@ streamlit run streamlit-app.py
 
 ### Dashboard
 ![dashboard_image.png](images%2Fdashboard_image.png)
-
-## Video
-[![Realtime Voting System Data Engineering](https://img.youtube.com/vi/X-JnC9daQxE/0.jpg)](https://youtu.be/X-JnC9daQxE)
